@@ -16,23 +16,36 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 
 ---
 
-## Outline
+## Algorithm Outline
 
-- Generate the splitting field for $\phi(x)$
+1. (Preliminaries) Fix $\phi(x)$ and a power $n$, and generate the splitting field $L_{n,\phi}$ with the largest linear factor of $\phi^n(x) - x$ as the defining polynomial (note that we additionaly generate an associated 1-dimensional projective space $P_L$ over $L_{n,\phi}$ and a dynamical system $D_P$ over $P_L$).
+1. (Initialization) Choose $k$ points $\alpha$ in $L_{n,\phi}$ such that no $\alpha$ is preperiodic in $D_P$ (i.e. all $\alpha$ have canonical height $\hat{h}_\phi(\alpha) > 0$). This is the **initial population**.
+    1. Note that each $\alpha$ will have the form $$\alpha = c_da^d + c_{d-1}a^{d-1} + \dots + c_1a + c_0$$ with each $c_i$ an integer and $a$ the generator for $L_{n,\phi}$.
+1. (Store and Grade) Store the initial population in an array sorted in ascending order by $\hat{h}_\phi(\alpha)$. This canonical height will serve as the **fitness score** for each $\alpha$ -- a lower height corresponds to a better score. 
+1. (Selection) Choose the $l$ elements with best fitness score from the initial population. These $\alpha_1, \dots, \alpha_l$ are **parents**.
+1. (Breeding) Randomly select $k - l$ unique pairings from the parents. For each paring $(\alpha_i,\alpha_j)$, define $$\beta_{ij} = b_da^d + b_{d-1}a^{d-1} + \dots + b_1a + b_0$$ where each coefficient $b_m$ is with equal probability either the corresponding coefficient (in terms of degree) of $\alpha_i$ or $\alpha_j$. These $\beta$ are the **offspring**.
+    1. (Mutation) For each $b_m$ include a small chance of mutation, where a random integer in [-10,10] is chosen instead (currenly via Uniform Distribution).
+1. (Store and Grade) Store the parents and offspring along with each of their canonical heights in a new array, called the **offspring population**, sorted in ascending order by height. 
+    1. (Generational Fitness) Optionally report a mean fitness score for the offspring population.
+1. (Main Loop) Repeat steps 4-7 by choosing parents from the offspring population until termination is triggered.
+1. (Termination) Terminate the main loop after fitness score is minimized or $N$ generations are bred. Report candidates with best fitness score from the final offspring generation.
 
-    - Define x over a polynomial ring, choose $\phi(x)$ and fix $n$
-    - Pick the largest linear factor of $\phi(x) - x$ and generate the number field $L_n$ defined by this factor
-    
-    
-- Generate an initial generation of points
+---
 
-    - Define a projective space $P$ over $L_n$, and a dynamical system over $P$
-    - Pick an upper bound for the canonical height and generate $m$ points $\alpha$ in $L_n$ (not preperiodic) with height lower than the chosen bound
-    - Store each $\alpha$ (a polynomial $c_na^n + \dots + c_1a + c_0$ where $a$ is the generator of $L_n$) in a list, graded by height
-    
-    
-- Keep the $n$ points of smallest height, and flush the rest
+## Changelog v0.2
+
+---
+
+## To Do
+
+---
+
+## Resources and References
+
+- J. H. Silverman. *The Arithmetic of Dynamical Systems*, Springer, New York, 2007
+- F. Amoroso and R. Dvornicich. A lower bound for the height in abelian extensions. *J. Number Theory*, 80(2):260–272, 2000
+- M. Keet. "Genetic Algorithms - An overview (inline)," http://www.meteck.org/gaover.html
+- El Otmani, S. and Rhin, G. and Sac-\'{E}p\'{e}e, J.-M. Finding new limit points of {M}ahler's measure by genetic algorithms. *Exp. Math.*, 28(2):129-131, 2019
+- C. James. Introduction to some problems in Arithmetic Dynamics. https://github.com/carsonaj/Mathematics/blob/master/Introduction%20to%20Arithmetic%20Dynamics/Arithmetic%20Dynamics%20Notes.pdf
 
 
-- Given a generation size $s$, "breed" $s-n$ new points from the remaining $n$ points
-    - Choose $s-n$ unique pairings from $n$ remaining points
