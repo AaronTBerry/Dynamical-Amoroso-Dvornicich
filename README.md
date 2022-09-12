@@ -2,8 +2,6 @@
 
 Aaron Berry \ Preston Kelly \ Version 0.1 \ Last Updated: 9/11/2022 
 
----
-
 ## Introduction
 
 This project aims to explore the dynamical analogue to a theorem by Amoroso and Dvornicich via the use of genetic algorithms. The dynamical theorem can be stated as follows:
@@ -13,8 +11,6 @@ This project aims to explore the dynamical analogue to a theorem by Amoroso and 
 In particular, we want some $c$ which does not depend on $n$.
 
 We will not attempt to prove this conjecture. Rather, we use a genetic algorithm to generate numbers $\alpha$ in $L_n$ of small height, with the goal of developing a better understanding of how dynamical height behaves over splitting fields.
-
----
 
 ## Algorithm Outline
 
@@ -30,22 +26,16 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 1. (Main Loop) Repeat steps 4-7 by choosing parents from the offspring population until termination is triggered.
 1. (Termination) Terminate the main loop after fitness score is minimized or $N$ generations are bred. Report candidates with best fitness score from the final offspring generation.
 
----
-
 ## Changelog v0.2
 
----
-
 ## To Do
-
----
 
 ## Resources and References
 
 - J. H. Silverman. *The Arithmetic of Dynamical Systems*, Springer, New York, 2007
 - F. Amoroso and R. Dvornicich. A lower bound for the height in abelian extensions. *J. Number Theory*, 80(2):260–272, 2000
 - M. Keet. "Genetic Algorithms - An overview (inline)," http://www.meteck.org/gaover.html
-- El Otmani, S. and Rhin, G. and Sac-\'{E}p\'{e}e, J.-M. Finding new limit points of {M}ahler's measure by genetic algorithms. *Exp. Math.*, 28(2):129-131, 2019
+- El Otmani, S. and Rhin, G. and Sac-Epee, J.-M. Finding new limit points of {M}ahler's measure by genetic algorithms. *Exp. Math.*, 28(2):129-131, 2019
 - C. James. Introduction to some problems in Arithmetic Dynamics. https://github.com/carsonaj/Mathematics/blob/master/Introduction%20to%20Arithmetic%20Dynamics/Arithmetic%20Dynamics%20Notes.pdf
 
 
