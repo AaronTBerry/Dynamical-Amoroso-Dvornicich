@@ -45,7 +45,7 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 - J. H. Silverman. *The Arithmetic of Dynamical Systems*, Springer, New York, 2007
 - F. Amoroso and R. Dvornicich. A lower bound for the height in abelian extensions. *J. Number Theory*, 80(2):260–272, 2000
 - M. Keet. "Genetic Algorithms - An overview (inline)," http://www.meteck.org/gaover.html
-- El Otmani, S. and Rhin, G. and Sac-\'{E}p\'{e}e, J.-M. Finding new limit points of {M}ahler's measure by genetic algorithms. *Exp. Math.*, 28(2):129-131, 2019
+- El Otmani, S. and Rhin, G. and Sac-Epee, J.-M. Finding new limit points of {M}ahler's measure by genetic algorithms. *Exp. Math.*, 28(2):129-131, 2019
 - C. James. Introduction to some problems in Arithmetic Dynamics. https://github.com/carsonaj/Mathematics/blob/master/Introduction%20to%20Arithmetic%20Dynamics/Arithmetic%20Dynamics%20Notes.pdf
 
 
