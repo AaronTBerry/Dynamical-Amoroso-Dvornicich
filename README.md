@@ -2,8 +2,6 @@
 
 Aaron Berry \ Preston Kelly \ Version 0.1 \ Last Updated: 9/11/2022 
 
----
-
 ## Introduction
 
 This project aims to explore the dynamical analogue to a theorem by Amoroso and Dvornicich via the use of genetic algorithms. The dynamical theorem can be stated as follows:
@@ -13,8 +11,6 @@ This project aims to explore the dynamical analogue to a theorem by Amoroso and 
 In particular, we want some $c$ which does not depend on $n$.
 
 We will not attempt to prove this conjecture. Rather, we use a genetic algorithm to generate numbers $\alpha$ in $L_n$ of small height, with the goal of developing a better understanding of how dynamical height behaves over splitting fields.
-
----
 
 ## Algorithm Outline
 
@@ -30,15 +26,9 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 1. (Main Loop) Repeat steps 4-7 by choosing parents from the offspring population until termination is triggered.
 1. (Termination) Terminate the main loop after fitness score is minimized or $N$ generations are bred. Report candidates with best fitness score from the final offspring generation.
 
----
-
 ## Changelog v0.2
 
----
-
 ## To Do
-
----
 
 ## Resources and References
 
