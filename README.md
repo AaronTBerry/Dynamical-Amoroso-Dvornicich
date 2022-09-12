@@ -28,8 +28,6 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 
 ## Changelog v0.2
 
-## To Do
-
 ## Resources and References
 
 - J. H. Silverman. *The Arithmetic of Dynamical Systems*, Springer, New York, 2007
