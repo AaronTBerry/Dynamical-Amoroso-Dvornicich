@@ -1,6 +1,6 @@
 # Dynamical Amoroso Dvornicich via Genetic Algorithms
 
-Aaron Berry \ Preston Kelly \ Version 0.2 \ Last Updated: 9/14/2022 
+Aaron Berry \ Preston Kelley \ Version 0.2 \ Last Updated: 9/14/2022 
 
 ## Introduction
 
