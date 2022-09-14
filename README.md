@@ -47,6 +47,7 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 - [ ] Fix bug that results in smaller new generations than desired
 - [ ] (Maybe) Build alternate breeding algorithm using a randomly selected crossover point
 - [ ] (Maybe) Restrict parent selection to prevent excessive duplication
+- [ ] (Maybe) Include mutations over some range of degrees to allow for mutations even when both parents are of lesser degree
 - [ ] (Maybe) Include insertion of random points from $L_n$ when breeding a new generation to increase genetic diversity
 
 ## Resources and References
