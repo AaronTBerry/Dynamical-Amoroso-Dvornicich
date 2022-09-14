@@ -1,6 +1,6 @@
 # Dynamical Amoroso Dvornicich via Genetic Algorithms
 
-Aaron Berry \ Preston Kelly \ Version 0.1 \ Last Updated: 9/11/2022 
+Aaron Berry \ Preston Kelly \ Version 0.2 \ Last Updated: 9/14/2022 
 
 ## Introduction
 
@@ -20,13 +20,34 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 1. (Store and Grade) Store the initial population in an array sorted in ascending order by $\hat{h}_\phi(\alpha)$. This canonical height will serve as the **fitness score** for each $\alpha$ -- a lower height corresponds to a better score. 
 1. (Selection) Choose the $l$ elements with best fitness score from the initial population. These $\alpha_1, \dots, \alpha_l$ are **parents**.
 1. (Breeding) Randomly select $k - l$ unique pairings from the parents. For each paring $(\alpha_i,\alpha_j)$, define $$\beta_{ij} = b_da^d + b_{d-1}a^{d-1} + \dots + b_1a + b_0$$ where each coefficient $b_m$ is with equal probability either the corresponding coefficient (in terms of degree) of $\alpha_i$ or $\alpha_j$. These $\beta$ are the **offspring**.
-    1. (Mutation) For each $b_m$ include a small chance of mutation, where a random integer in [-10,10] is chosen instead (currenly via Uniform Distribution).
+    1. (Mutation) For each $b_m$ include a small chance of mutation
 1. (Store and Grade) Store the parents and offspring along with each of their canonical heights in a new array, called the **offspring population**, sorted in ascending order by height. 
     1. (Generational Fitness) Optionally report a mean fitness score for the offspring population.
 1. (Main Loop) Repeat steps 4-7 by choosing parents from the offspring population until termination is triggered.
 1. (Termination) Terminate the main loop after fitness score is minimized or $N$ generations are bred. Report candidates with best fitness score from the final offspring generation.
 
-## Changelog v0.2
+## Changelog
+
+### Version 0.2
+
+- Now includes main loop and a function `initialize()` to run the genetic algorithm
+- General refactor, including several new or reworked functions
+- Certain variables are now global, to prevent having to repeatedly define them. All global variables are found in `initialize()`
+- Mutations are now selected via Gaussian distribution, with standard deviation 10, to allow for more randomness in the population
+- Each generation is now graded by average height (this has no impact on selection)
+- All variables are now `snake_case` and all user-defined functions are `camelCase`
+- There are now comments!
+
+## To Do
+
+- [ ] Fix `displayProgress()` and the `display` variable to be callable in `initialize()`
+- [ ] Include option to write data to a .txt file
+- [ ] Include error bounds in height calculation for `initialGen()` and `breedGeneration()` when checking for preperodicity
+- [ ] Incorporate Dr. Paul Fili's new height algorithm
+- [ ] Fix bug that results in smaller new generations than desired
+- [ ] (Maybe) Build alternate breeding algorithm using a randomly selected crossover point
+- [ ] (Maybe) Restrict parent selection to prevent excessive duplication
+- [ ] (Maybe) Include insertion of random points from $L_n$ when breeding a new generation to increase genetic diversity
 
 ## Resources and References
 
