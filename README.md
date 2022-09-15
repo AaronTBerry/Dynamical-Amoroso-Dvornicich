@@ -45,6 +45,8 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 - [ ] Include error bounds in height calculation for `initialGen()` and `breedGeneration()` when checking for preperodicity
 - [ ] Incorporate Dr. Paul Fili's new height algorithm
 - [ ] Fix bug that results in smaller new generations than desired
+- [ ] Include version that allows preperodic parents
+    - [ ]  Possible to include preperiodic lifespan?
 - [ ] (Maybe) Build alternate breeding algorithm using a randomly selected crossover point
 - [ ] (Maybe) Restrict parent selection to prevent excessive duplication
 - [ ] (Maybe) Include mutations over some range of degrees to allow for mutations even when both parents are of lesser degree
