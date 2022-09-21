@@ -38,7 +38,7 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 - All variables are now `snake_case` and all user-defined functions are `camelCase`
 - There are now comments!
 
-## To Do
+## To Do (Version 0.3)
 
 - [ ] Fix `displayProgress()` and the `display` variable to be callable in `initialize()`
 - [ ] Include option to write data to a .txt file
