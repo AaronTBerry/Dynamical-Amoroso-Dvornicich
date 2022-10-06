@@ -28,6 +28,13 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 
 ## Changelog
 
+### Version 0.3
+
+- Total refactor
+- Genetic algorithm (partially) generalized to work with other data (see Algorithm outline)
+- Functions specific to Amoroso-Dvornicich separated into their own section
+- $L_{n,\phi}$ is no longer determined by the largest factor of $\phi(x)^n - x$, but instead chosen as the Galois closure over all factors.
+
 ### Version 0.2
 
 - Now includes main loop and a function `initialize()` to run the genetic algorithm
@@ -38,19 +45,14 @@ We will not attempt to prove this conjecture. Rather, we use a genetic algorithm
 - All variables are now `snake_case` and all user-defined functions are `camelCase`
 - There are now comments!
 
-## To Do (Version 0.3)
+## To Do (Version 0.31)
 
-- [ ] Fix `displayProgress()` and the `display` variable to be callable in `initialize()`
+- [ ] Include better print flags
 - [ ] Include option to write data to a .txt file
-- [ ] Include error bounds in height calculation for `initialGen()` and `breedGeneration()` when checking for preperodicity
 - [ ] Incorporate Dr. Paul Fili's new height algorithm
-- [ ] Fix bug that results in smaller new generations than desired
-- [ ] Include version that allows preperodic parents
-    - [ ]  Possible to include preperiodic lifespan?
-- [ ] (Maybe) Build alternate breeding algorithm using a randomly selected crossover point
-- [ ] (Maybe) Restrict parent selection to prevent excessive duplication
-- [ ] (Maybe) Include mutations over some range of degrees to allow for mutations even when both parents are of lesser degree
-- [ ] (Maybe) Include insertion of random points from $L_n$ when breeding a new generation to increase genetic diversity
+- [ ] Include toggle for preperiodic parents (currently not permitted)
+- [ ] Include toggle for preperiodic mutation (currently permitted)
+- [ ] (Maybe) Include option to permit preperiodic life-span 
 
 ## Resources and References
 
